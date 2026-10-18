@@ -22,36 +22,8 @@ This project demonstrates the basic implementation of a Python web application a
 
 The following diagram illustrates the application's deployment architecture:
 
-```text
-                 Developer
-                     |
-                     | Push Code
-                     v
-                  GitHub
-                     |
-                     | GitHub Webhook
-                     v
-                  Jenkins
-                     |
-                     | Build & Deployment
-                     v
-                Linux Server
-                     |
-                     v
-                Gunicorn Server
-                     |
-                     v
-                Flask Application
-                     |
-             +-------+-------+
-             |               |
-             v               v
-          Home Page        /hi Route
-             |               |
-             v               v
-        Success Message   Flask & Docker
-                            Message
-```
+<img width="1672" height="941" alt="Flask App Architecture Diagram" src="https://github.com/user-attachments/assets/9c3b2939-64ac-4200-a365-b7226fe9425a" />
+
 
 ### Architecture Components
 
