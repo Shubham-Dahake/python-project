@@ -1,4 +1,4 @@
-# Python Flask Application Deployment Using Jenkins and GitHub Webhooks
+# # Flask App Deployment
 
 ## 💡 Introduction
 
@@ -96,6 +96,7 @@ from flask import Flask
 import os
 
 app = Flask(__name__)
+<img width="1917" height="1078" alt="Screenshot 2026-10-18 125255" src="https://github.com/user-attachments/assets/08774abe-7a63-4e7e-9609-8a068d540798" />
 
 @app.route('/')
 def hello_geek():
@@ -132,11 +133,12 @@ The application returns a different response depending on the route accessed by 
 http://<SERVER-PUBLIC-IP>:5000/
 ```
 
+
 The browser displays:
 
-```text
-successfully deployed python application through jenkins!!!!!!!!!, added webhook
-```
+<img width="1917" height="1078" alt="Screenshot 2026-10-18 125307" src="https://github.com/user-attachments/assets/3b4c8dc2-bc79-4010-a357-6dad5a1cecba" />
+
+
 
 This response indicates that the home route is responding to HTTP requests.
 
@@ -148,9 +150,9 @@ This response indicates that the home route is responding to HTTP requests.
 http://<SERVER-PUBLIC-IP>:5000/hi
 ```
 
-The browser displays the following heading:
+The browser displays:
 
-**Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii from Flask & Docker**
+<img width="1917" height="1078" alt="Screenshot 2026-10-18 125255" src="https://github.com/user-attachments/assets/ab31602f-f363-4fd2-aa40-5195205917e0" />
 
 This route demonstrates how Flask can return HTML content to the browser.
 
@@ -223,7 +225,7 @@ python3 -m venv myenv
 Activate the virtual environment:
 
 ```bash
-source myenv/bin/activate
+sudo bash myenv/bin/activate
 ```
 
 The virtual environment isolates the application's Python packages from the system Python environment.
@@ -271,7 +273,7 @@ Stop the development server with `Ctrl+C` when you finish testing.
 
 ### 7. Run the Application Using Gunicorn
 
-Make sure the virtual environment is activated and Gunicorn is installed.
+After the virtual environment is activating and installing Gunicorn.
 
 Start Gunicorn with:
 
@@ -287,20 +289,7 @@ gunicorn --bind 0.0.0.0:5000 app:app
 
 Keep the process running while testing the application.
 
-### 8. Configure Jenkins and GitHub Webhooks
 
-To automate the deployment process:
-
-1. Configure a Jenkins job or pipeline for the GitHub repository.
-2. Configure the repository webhook to notify Jenkins when code changes are pushed.
-3. Ensure Jenkins can access the repository and the deployment server.
-4. Configure the pipeline to retrieve the latest code.
-5. Install dependencies and perform the required verification steps.
-6. Configure the deployment stage to update and restart the application.
-7. Push a code change to GitHub and verify that Jenkins starts the configured job.
-8. Check the application to confirm that the deployed version has been updated.
-
-**Note:** The Jenkins pipeline configuration and webhook endpoint must be set up separately. The commands above describe manual application deployment and do not, by themselves, configure automated CI/CD.
 
 ## 🐧 Linux Commands Used
 
@@ -347,7 +336,3 @@ This project helped develop an understanding of how application code moves from 
 ## 👤 Author
 
 **Shubham Dahake**
-
-GitHub: [Shubham-Dahake](https://github.com/Shubham-Dahake)
-
-Project Repository: [python-project](https://github.com/Shubham-Dahake/python-project)
